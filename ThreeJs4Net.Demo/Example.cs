@@ -24,7 +24,7 @@ namespace ThreeJs4Net.Demo
         {
             Debug.Assert(null != control);
 
-            this.renderer = new WebGLRenderer(control);
+            this.renderer = new WebGLRenderer(control.Size);
 
             stopWatch.Start();
         }

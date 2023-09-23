@@ -1,4 +1,9 @@
-﻿namespace ThreeJs4Net.Demo
+﻿#if NET6_0_OR_GREATER
+using GLControl = OpenTK.WinForms.GLControl;
+#else
+using GLControl = OpenTK.GLControl;
+#endif
+namespace ThreeJs4Net.Demo
 {
     partial class Form1
     {
@@ -28,7 +33,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.glControl = new OpenTK.GLControl();
+            this.glControl = new GLControl();
             this.treeViewSamples = new System.Windows.Forms.TreeView();
             this.splitContainer = new System.Windows.Forms.SplitContainer();
             this.statusStrip2 = new System.Windows.Forms.StatusStrip();
@@ -54,7 +59,8 @@
             this.glControl.Name = "glControl";
             this.glControl.Size = new System.Drawing.Size(714, 729);
             this.glControl.TabIndex = 2;
-            this.glControl.VSync = true;
+            //this.glControl.VSync = true;
+            this.glControl.Visible = true;
             this.glControl.Load += new System.EventHandler(this.glControl_Load);
             this.glControl.Paint += new System.Windows.Forms.PaintEventHandler(this.glControl_Paint);
             this.glControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.glControl_MouseDown);
@@ -177,7 +183,7 @@
 
         #endregion
 
-        private OpenTK.GLControl glControl;
+        private GLControl glControl;
         private System.Windows.Forms.TreeView treeViewSamples;
         private System.Windows.Forms.SplitContainer splitContainer;
         private System.Windows.Forms.StatusStrip statusStrip1;

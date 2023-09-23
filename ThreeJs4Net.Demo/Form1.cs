@@ -37,7 +37,9 @@ namespace ThreeJs4Net.Demo
                 GL.GetString(StringName.Version);
 
             toolStripStatusLabel.Text = string.Empty;
-
+#if NET6_0_OR_GREATER
+            this.glControl.Profile = OpenTK.Windowing.Common.ContextProfile.Compatability;
+#endif
             //stats.begin();
         }
 
@@ -62,7 +64,9 @@ namespace ThreeJs4Net.Demo
         /// <param name="e"></param>
         void Application_Idle(object sender, EventArgs e)
         {
+#if !NET6_0_OR_GREATER
             while (glControl.IsIdle)
+#endif
             {
                 Render();
             }

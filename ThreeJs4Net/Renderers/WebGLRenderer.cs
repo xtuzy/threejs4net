@@ -5,7 +5,6 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
-using System.Windows.Forms;
 using OpenTK.Graphics.OpenGL;
 using ThreeJs4Net.Cameras;
 using ThreeJs4Net.Core;
@@ -289,7 +288,7 @@ namespace ThreeJs4Net.Renderers
         /// <summary>
         ///     Constructor
         /// </summary>
-        public WebGLRenderer(Control control)
+        public WebGLRenderer(Size controlSize)
         {
             //	        Trace.TraceInformation( "Three.WebGLRenderer {0}", Three.Version );
 
@@ -303,8 +302,8 @@ namespace ThreeJs4Net.Renderers
 
             this._viewportX = 0;
             this._viewportY = 0;
-            this._viewportWidth = control.Width;
-            this._viewportHeight = control.Width;
+            this._viewportWidth = controlSize.Width;
+            this._viewportHeight = controlSize.Height;
 
             // clearing
 
