@@ -2,7 +2,6 @@
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using OpenTK.Audio;
 using ThreeJs4Net.Core;
 using ThreeJs4Net.Properties;
 

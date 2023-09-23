@@ -19,13 +19,13 @@ namespace ThreeJs4Net.Helpers
         /// <param name="step"></param>
         public GridHelper(float size, float step)
         {
-            var colorConvertor = new ColorConverter();
+            //var colorConvertor = new ColorConverter();
 
             var geometry = new Geometry();
             var material = new LineBasicMaterial { VertexColors = Three.VertexColors };
 
-            this.Color1 = (Color)colorConvertor.ConvertFromString("#444444");
-            this.Color2 = (Color)colorConvertor.ConvertFromString("#888888");
+            this.Color1 = Color.FromArgb(68, 68, 68);// (Color)colorConvertor.ConvertFromString("#444444");
+            this.Color2 = Color.FromArgb(136, 136, 136);// (Color)colorConvertor.ConvertFromString("#888888");
 
             this.Color1 = Color.DeepSkyBlue; // TODO deze kleur komt door
             this.Color2 = Color.GreenYellow; // TODO deze kleur komt NIET door

@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ThreeJs4Net.TK\ThreeJs4Net.TK.csproj" />
     <ProjectReference Include="..\ThreeJs4Net\ThreeJs4Net.csproj" />
   </ItemGroup>
 

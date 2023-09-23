@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net472</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\ThreeJs4Net\Renderers\WebGL\**\*.*">
+      <Link>Renderers\WebGL\%(RecursiveDir)%(FileName)%(Extension)</Link>
+    </Compile>
+    <Compile Include="..\ThreeJs4Net\Renderers\WebGLRenderer.cs" Link="WebGLRenderer.cs" />
+    <Compile Include="..\ThreeJs4Net\Renderers\WebGLRenderTarget.cs" Link="WebGLRenderTarget.cs" />
+    <Compile Include="..\ThreeJs4Net\Renderers\WebGlRenderTargetCube.cs" Link="WebGlRenderTargetCube.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="OpenTK" Version="3.3.1" />
+    <PackageReference Include="OpenTK.GLControl" Version="3.1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ThreeJs4Net\ThreeJs4Net.csproj" />
+  </ItemGroup>
+</Project>
